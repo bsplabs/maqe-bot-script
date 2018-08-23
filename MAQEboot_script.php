@@ -30,6 +30,8 @@
 			if ($line[$i] == "R") 		{ 	$rad += 90; 	}
 			elseif ($line[$i] == "L") 	{  	$rad -= 90; 	}
 
+			$direction = calDirection($rad); // latest current direction
+
 			/////// Find Position //////
 			if ($line[$i] == "W") {
 				$distanceStr = "";	// initial distance string
@@ -48,9 +50,7 @@
 						break;
 					}
 				}
-
 				$distanceNum = intval($distanceStr);
-				$direction = calDirection($rad);
 
 				///////// Start Walking ///////////
 				if($direction == "N") { $Y += $distanceNum; }
