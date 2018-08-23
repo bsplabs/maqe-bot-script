@@ -61,7 +61,7 @@
 		}
 		echo "X: ".$X." Y: ".$Y." Direction: ".$direction."\n";
 	}
-
+	
 	calRaduisAndDistance($argv[1]);
 
 ?>
