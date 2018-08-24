@@ -4,7 +4,7 @@
 	{
 		$facing = "";
 
-		if ($rad > 360|| $rad < -360) { $rad = $rad/5; }
+		if ($rad > 360|| $rad < -360) { $rad = $rad-360; return calDirection($rad); }
 
 		if ($rad == 0 ) { $facing = "N"; }
 		elseif ($rad == 90) { $facing = "E"; }
@@ -61,7 +61,7 @@
 		}
 		echo "X: ".$X." Y: ".$Y." Direction: ".$direction."\n";
 	}
-	
+
 	calRaduisAndDistance($argv[1]);
 
 ?>
